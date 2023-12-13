@@ -11,7 +11,7 @@
     withPkgsFor = fn: nixpkgs.lib.genAttrs (builtins.attrNames hyprland.packages) (system: fn system nixpkgs.legacyPackages.${system});
   in {
     packages = withPkgsFor (system: pkgs: {
-      virtual-desktops = pkgs.callPackage ./ {
+      virtual-desktops = pkgs.callPackage {
         inherit (hyprland.packages.${system}) hyprland;
         stdenv = pkgs.gcc13Stdenv;
       };
