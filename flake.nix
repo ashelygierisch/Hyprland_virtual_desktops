@@ -15,7 +15,7 @@
         inherit (hyprland.packages.${system}) hyprland;
 	stdenv = pkgs.gcc13Stdenv;
       };
-    };
+    });
 
     devShells = withPkgsFor (system: pkgs: {
       default = pkgs.mkShell.override {stdenv = pkgs.gcc13Stdenv;}{
