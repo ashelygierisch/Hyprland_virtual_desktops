@@ -13,15 +13,15 @@
     packages = withPkgsFor (system: pkgs: {
       virtual-desktops = pkgs.callPackage ./virtual-desktops {
         inherit (hyprland.packages.${system}) hyprland;
-	stdenv = pkgs.gcc13Stdenv;
+        stdenv = pkgs.gcc13Stdenv;
       };
     });
 
     devShells = withPkgsFor (system: pkgs: {
       default = pkgs.mkShell.override {stdenv = pkgs.gcc13Stdenv;}{
-        name = "hyprland-vertial-desktops";
-	buildInputs = [hyprland.packages.${system}.hyprland];
-	inputsFrom = [hyprland.packages.${system}.hyprland];
+        name = "vertual-desktops";
+	      buildInputs = [hyprland.packages.${system}.hyprland];
+	      inputsFrom = [hyprland.packages.${system}.hyprland];
       };
     });
   };
