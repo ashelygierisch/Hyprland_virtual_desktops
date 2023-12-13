@@ -1,0 +1,11 @@
+[repository]
+name = "virtual-desktops"
+authors = ["milesje"]
+
+[virtual-desktops]
+description = "A plugin to add virtual desktops."
+authors = ["milesje"]
+output = "virtual-desktops.so"
+build = [
+    "make -C all",
+]
