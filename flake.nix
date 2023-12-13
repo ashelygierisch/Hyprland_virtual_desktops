@@ -23,6 +23,6 @@
 	buildInputs = [hyprland.packages.${system}.hyprland];
 	inputsFrom = [hyprland.packages.${system}.hyprland];
       };
-    };
+    });
   };
 }
