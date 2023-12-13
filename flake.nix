@@ -19,7 +19,7 @@
 
     devShells = withPkgsFor (system: pkgs: {
       default = pkgs.mkShell.override {stdenv = pkgs.gcc13Stdenv;}{
-        name = "vertual-desktops";
+        name = "virtual-desktops";
 	      buildInputs = [hyprland.packages.${system}.hyprland];
 	      inputsFrom = [hyprland.packages.${system}.hyprland];
       };
